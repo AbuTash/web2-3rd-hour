@@ -52,6 +52,18 @@
             font-size: 1.25rem;
             width: 50%;
         }
+        input[type=tel] {
+            padding: .5rem;
+            margin: .5rem;
+            font-size: 1.25rem;
+            width: 50%;
+        }
+        input[type=email] {
+            padding: .5rem;
+            margin: .5rem;
+            font-size: 1.25rem;
+            width: 50%;
+        }
         input[type=submit] {
             display: block;
             padding: 1rem;
@@ -61,7 +73,9 @@
         body{
             background: DarkOliveGreen;
         }
-        
+        textarea{
+            font-size: x-large;
+        }
 
 
 
@@ -96,16 +110,23 @@
             
 
             <label for="lname">Email :</label>
-            <input type="text" name="lname" placeholder="Enter Email ">
+            <input type="Email" name="lname" placeholder="Enter Email ">
 
             <label for="lname">Phone Number:</label>
-            <input type="text" name="lname" placeholder="Enter Phone Number ">
+            <input type="tel" name="lname" placeholder="Enter Phone Number ">
+           
+
+            <label for="lname">feedback:</label>
+           
+            <form action="/action_page.php">
+              <textarea name="message" rows="5" cols="60" placeholder="type feedback here!"></textarea>
+              
+            
+
+
+
+
             <input type="submit" name="submit" value="Submit form">
-
-            <label for="lname">Any Messages To Us?</label>
-            <input type="text" name="lname" placeholder="Comments">
-
-            <input type="submit" name="submit" value="Submit feedback!">
         </form>
         
 
