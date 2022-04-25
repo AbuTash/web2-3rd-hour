@@ -50,7 +50,7 @@
 
         <div class="grid-item">
             <div class="grid-image">
-                    <img src="https://www.si.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cq_auto:good%2Cw_1200/MTY4MTcwMTMzMDEyMDk2Mzg0/screen_shot_2016-05-28_at_72024_pmpng.png"   alt="#">
+                    <img onmouseover="replaceImage(0)" onmouseout="replaceImage(0)" src="https://www.si.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cq_auto:good%2Cw_1200/MTY4MTcwMTMzMDEyMDk2Mzg0/screen_shot_2016-05-28_at_72024_pmpng.png"  data-image2="https://s.hs-data.com/bilder/spieler/gross/13029.jpg" alt="1">
 
             </div>
             <h3>CR7 aka (Siuu guy)</h3>
@@ -63,7 +63,7 @@
 
         <div class="grid-item">
             <div class="grid-image">
-                    <img src="https://resources.premierleague.com/premierleague/photos/players/250x250/p220688.png"   alt="#">
+                    <img onmouseover="replaceImage(1)" onmouseout="replaceImage(1)" src="https://resources.premierleague.com/premierleague/photos/players/250x250/p220688.png"  data-image2="https://i.dailymail.co.uk/1s/2022/04/09/01/56396479-10701737-A_decision_on_whether_Manchester_United_striker_Mason_Greenwood_-m-141_1649464881755.jpg"  alt="#">
 
             </div>
             <h3> Mason Greenwood </h3>
@@ -75,7 +75,7 @@
         </div> <!--close of grid item-->
         <div class="grid-item">
             <div class="grid-image">
-                    <img src=" https://imageio.forbes.com/specials-images/imageserve/6078b1c163748b11b1f8f539/Manchester-United-v-Liverpool--The-Emirates-FA-Cup-4th-Round/0x0.jpg?fit=crop&format=jpg&crop=2526,1802,x313,y5,safe"   alt="#">
+                    <img onmouseover="replaceImage(2)" onmouseout="replaceImage(2)" src=" https://imageio.forbes.com/specials-images/imageserve/6078b1c163748b11b1f8f539/Manchester-United-v-Liverpool--The-Emirates-FA-Cup-4th-Round/0x0.jpg?fit=crop&format=jpg&crop=2526,1802,x313,y5,safe"  data-image2="https://media.gettyimages.com/photos/harry-maguire-of-manchester-united-looks-on-during-the-premier-league-picture-id1342442688?s=612x612"  alt="#">
 
             </div>
             <h3> Harry Fridge Maguire</h3>
@@ -87,7 +87,7 @@
         </div> <!--close of grid item-->
         <div class="grid-item">
             <div class="grid-image">
-                    <img src="https://www.coachesvoice.com/wp-content/uploads/2020/07/FredFeatured.png"   alt="#">
+                    <img onmouseover="replaceImage(3)" onmouseout="replaceImage(3)"  src="https://www.coachesvoice.com/wp-content/uploads/2020/07/FredFeatured.png" data-image2="https://tmssl.akamaized.net/images/foto/originals/fred-manchester-united-1581336443-31483.jpg?lm=1581336456"  alt="#">
 
             </div>
             <h3> Fred Again</h3>
@@ -159,6 +159,18 @@
     <footer>
         Made in FHS Web design
     </footer>
+    
+    <script>
+      function replaceImage(num) {
+        var element = document.getElementsByTagName('img') [num ];
+        var originalImage = element.getAttribute('src');
+        var newImage = element.getAttribute('data-image2');
+        
+        element.setAttribute('src', newImage);
+        element.setAttribute('data-image2', originalImage)
+        //alert(newImage);
+      }
+    </script>
 
 
 
